@@ -1,5 +1,17 @@
-På naturhistoriska riksmusset presenterar olika avdelningar ett antal gånger per år sin forskning i utställningarna. Under vintern 2018 presenterade CGI arbetet som vi gör på uppdrag av naturvårdsverket för att ta fram underlag till förvaltningen av den svenska björnpopulationen. Som en del av presentationen skapades ett kort bildspel som gav besökarna en kort sammanfattning av metoder och syfte med arbetet.
+På naturhistoriska riksmuseet presenterar olika avdelningar ett antal
+gånger per år sin forskning för allmänheten som en del av
+utställningarna. Detta sker under namnet forskarfnatt och brukar ofta
+kopplas till skollov då många besöker museet.
 
-Presentationen är en enkel Rmarkdown presentation som är något modifierad för att få till ett fungerande bildspel som går runt runt tills man väljer att stänga ned.
+Under vintern 2018 presenterade CGI de arbete som vi gör på uppdrag av
+naturvårdsverket för att ta fram underlag till förvaltningen av den
+svenska björnpopulationen. Som en del av presentationen skapades ett
+kort bildspel som gav besökarna en kort sammanfattning av metoder och
+syfte med arbetet.
 
-För att visa se presentationen gå till https://thokall.github.io/forskarfnatt/ och gå till [presentationen](presentation.html)
+Presentationen är en enkel Rmarkdown presentation som är något
+modifierad för att få till ett fungerande bildspel körs i loop. 
+
+För att visa se presentationen gå till
+https://thokall.github.io/forskarfnatt/ och gå till
+[presentationen](presentation.html)
