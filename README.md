@@ -9,9 +9,5 @@ svenska björnpopulationen. Som en del av presentationen skapades ett
 kort bildspel som gav besökarna en kort sammanfattning av metoder och
 syfte med arbetet.
 
-Presentationen är en enkel Rmarkdown presentation som är något
-modifierad för att få till ett fungerande bildspel körs i loop. 
 
-För att visa se presentationen gå till
-https://thokall.github.io/forskarfnatt/ och gå till
 [presentationen](presentation.html)
