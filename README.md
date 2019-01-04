@@ -2,4 +2,4 @@ På naturhistoriska riksmusset presenterar olika avdelningar ett antal gånger p
 
 Presentationen är en enkel Rmarkdown presentation som är något modifierad för att få till ett fungerande bildspel som går runt runt tills man väljer att stänga ned.
 
-För att visa se presentationen gå till https://thokall.github.io/forskarfnatt/ och gå till [presentiationen](presentation.html)
+För att visa se presentationen gå till https://thokall.github.io/forskarfnatt/ och gå till [presentationen](Presentation.html)
