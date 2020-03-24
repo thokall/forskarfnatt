@@ -1,88 +1,163 @@
 ---
-title: "Björninventering i Sverige"
+title: 'ESB `r emo::ji("heart")` DNA @ NRM'
+enableEmoji: true
 output:
   xaringan::moon_reader:
+    yolo:
+      img: Pictures/ingierli.jpg
+      times: 2
+    css: ["robot", "nrm.css"] 
     lib_dir: libs
     nature:
       highlightStyle: github
-      countIncrementalSlides: false
-      beforeInit: "loop.js"
+      titleSlideClass: [top, left]
 ---
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(emo)
 ```
 
-### Under hösten samlar svenska jägare in björnspillning för DNA-analys
+
+### The environmental specimen bank at NRM
+
+
+- 350 000 samples
+- Oldest material from the mid 60s
+- Majority of samples from two long-term projects
 
 .pull-left[
-![Björn](Pictures/bear.png)
+```{r Contaminants, echo=FALSE, fig.cap="Contaminants monitoring", out.width = '85%'}
+knitr::include_graphics("Pictures/Arter.png")
+```
 ]
 .pull-right[
-![Spillning](Pictures/spillning.png)
+```{r TopPredator, echo=FALSE, fig.cap="Top predator population monitoring", out.width = '75%'}
+knitr::include_graphics("Pictures/Arter2.png")
+```
 ]
 
 ---
 
-### Alla spillningsprover får en unik kod och har GPS koordinater
+### Since 2015 DNA extractions is stored in the NRM ESB
+
+- DNA extractions from the population monitoring of brown-bear in Sweden ~12000 samples
+- eDNA samples - water, soil and sediment <500 samples
+- Population genetic studies mostly tissue samples <1000 samples
 
 .pull-left[
-![Prov](Pictures/samples2.png)
-- Flera tusen prover per år
-- De allra flesta är prover är björn, men även spillningsprover från räv, hund och älg har skickats in.
-]
-.pull-right[
-![Provinsamling](Pictures/sampling.png)
 
-]
-
-
----
-
-### I spillningen finns DNA spår både från björnens föda och från björnen själv
-
-![spillning](Pictures/spillingcontent.png)
----
-
-### Genetisk profil (DNA fingeravtryck)
-
-.pull-left[
-- Från DNA kan man se att spillningen är från björn och om det är en hane eller en hona
-- Det finns små skillnader i den genetiska profilen mellan björnar som gör att man kan avgöra från vilken individ spillningen kommer.
-- Antalet olika genetiska profiler som hittas ger information om hur många björnar som finns.
-]
-.pull-right[
-![Genetik](Pictures/genetik.png)
-]
-
----
-
-### Antal björnar i Sverige
-
-![Populationsutveckling](Pictures/population.png)
-
----
-
-### Var finns björnarna?
-
-.pull-left[
-![densitet](Pictures/density.png)
+```{r Samples, echo=FALSE, fig.cap="", out.width = '75%'}
+knitr::include_graphics("Pictures/samples2.png")
+```
 ]
 
 .pull-right[
-- I mörka områden är det relativt mycket björn
-- I södra Sverige sker ingen regelbunden inventering
-- Baserat på bland annat dessa resultat förvaltar Naturvårdsverket den svenska björnpopulationen.
+```{r Filter, echo=FALSE, fig.cap="", out.width = '65%'}
+knitr::include_graphics("Pictures/Filter.jpeg")
+```
 ]
 
 ---
 
-### Resultat sparas i en gemensam databas för Sverige och Norge och finns på rovbase.se
+### DNA extractions worknig procedure
 
 .pull-left[
-![densitet](Pictures/sample.png)
+- Unique identifiers are assigned upon arrival to the museum
+- DNA extractions are done using in-house laboratory facilities
+- Most of the extraction work are automated on robots that can handle up to 192 samples per hour
+- Magnetic bead based procedures are preferred to retain high-molecular weight DNA if present, but adjustment are done based on type of samples.
 ]
 
 .pull-right[
-![densitet](Pictures/frame.png)
+![Micronic](Pictures/KingFisher.jpg)
+
 ]
+
+---
+
+### Long term storage
+
+.pull-left[
+- Subset of the extraction directly transferred to long term storage tubes.
+- Each extraction gets a unique identifier (QR-code at the bottom of the tube)
+- 96 tubes stored in barcoded racks
+- Samples and rack are scanned, each tube and rack get a unique identifier
+]
+
+.pull-right[
+```{r Micronics, echo=FALSE, fig.cap="", out.width = '75%'}
+knitr::include_graphics("Pictures/Micronics.jpeg")
+```
+
+```{r Tracxer, echo=FALSE, fig.cap="", out.width = '75%'}
+knitr::include_graphics("Pictures/Tracxer.jpg")
+```
+]
+
+---
+
+### SeqDB: LIMS and sample data base
+
+
+
+```{r SeqDB1, echo=FALSE, fig.cap="", out.width = '130%'}
+knitr::include_graphics("Pictures/seqdb.png")
+```
+
+---
+
+### SeqDB - Storage info
+
+```{r SeqDB2, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("Pictures/storage.png")
+```
+
+---
+
+### SeqDB - Sample info
+
+```{r SeqDB3, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("Pictures/Screenshot-2.png")
+```
+
+---
+
+### Custom made public interface
+
+```{r Seqpub, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("Pictures/seqpub.png")
+```
+
+---
+
+### Noteworthy features and technical details
+
+- Customizable bulk import for easy import of large number of similar samples
+- Customizable bulk edit - to make it easy to modify entries 
+- Possible to make data available via API and system is compliant with Darwin core and MixS for easy export and integration with other systems. 
+- Loans is currently handled via simple email requests, but the public interface will include forms to make loan requests based on highlighted samples
+
+&nbsp;
+
+.pull-left[
+```{r post, echo=FALSE, fig.cap="PostgreSQL", out.width = '20%'}
+knitr::include_graphics("Pictures/postgres.png")
+```
+]
+
+.pull-right[
+
+```{r docker, echo=FALSE, fig.cap="", out.width = '50%'}
+knitr::include_graphics("Pictures/docker.png")
+```
+]
+---
+
+### Credits
+
+- Agriculture and Agri-Food Canada (AAFC) - SeqDB Developement
+
+- Ingimar Erlingsson, dev-ops at NRM responsible for our local seqdb instance
+
+- Sara Danielsson, head of the ESB at NRM for sharing lots of information for this presentation
